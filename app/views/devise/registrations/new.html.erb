@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-2">
+<h1>Create an account</h1>
+<h4>&nbsp;It's free and always will be.</h4>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="form-group ">
+    <%= f.label :name %><br>
+    <%= f.text_field :name,autofocus: true,class: "form-control input-large", required: true, placeholder: "Name" %>
+  </div>
+
+ <div class="form-group">
+    <%= f.label :college %><br>
+    <%= f.text_field :college,class: "form-control input-large", required: true, placeholder: "College" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :branch %><br>
+    <%= f.text_field :branch,class: "form-control input-large", required: true , placeholder: "Branch"%>
+  </div>
+
+  <div class="form-group">
+      <%= f.label :email %>
+      <%= f.email_field :email,  class: "form-control input-large", required: true, placeholder: "Email" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password %>
+      <%= f.password_field :password, class: "form-control input-large", required: true, placeholder: "Password" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, class: "form-control input-large", required: true, placeholder: "Re-enter password" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit "Sign up", class: "btn btn-primary" %>
+    </div>
+<% end %>
+
+
+
+</div>
+</div>
+</div>
+
+<%= render "devise/shared/links" %>
+
+

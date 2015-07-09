@@ -1,0 +1,12 @@
+Welcome to http://applyhub.me/
+
+This application is made in Ruby on Rails for all your registration needs. 
+
+Visit our site and try our application for free!!!
+
+For suggestions, write to us: care@applyhub.me
+
+You can also join chat room to chat with developers on: https://gitter.im/piyush-maurya/applyhub
+
+Thanks!!!
+

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="google-site-verification" content="ukX0ZFpmM1IOTf4KxcVSX4mzhwCRjZPoqYXB7f-YdHs" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="footer, address, phone, icons" />
+
+  <title>ApplyHub</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= favicon_link_tag "favicon.ico" %>
+
+
+  
+  <%= stylesheet_link_tag 'footer-distributed-with-address-and-phones' %>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+  <header class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+         
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div id="logo">
+        <%= link_to root_path do %>
+        <%= image_tag "5.jpg" %>
+    
+
+       <% end %>
+        </div>
+      </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <b>
+    
+          <% if user_signed_in? -%>
+            <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to 'Home', root_path,style: "color:#FFFFFF;" %></li>
+              <li><%= link_to 'Create Event', new_event_path,style: "color:#FFFFFF;" %></li>
+              <li><%= link_to 'Account', edit_user_registration_path,style: "color:#FFFFFF;" %></li>
+              <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete ,style: "color:#FFFFFF;"%></li>
+            </ul>
+          <% else -%>
+            <ul class="nav navbar-nav pull-right">
+              <li><%= link_to 'Home', root_path,style: "color:#FFFFFF;" %></li>
+              <li><%= link_to 'How we work?', work_path,style: "color:#FFFFFF;" %></li>
+              <li><%= link_to 'Sign up', new_user_registration_path ,style: "color:#FFFFFF;"%></li>
+              <li><%= link_to 'Sign in', new_user_session_path,style: "color:#FFFFFF;" %></li>
+            </ul>
+          <% end -%>
+        </b>
+      </div>
+    </div>
+  </header>
+
+
+
+  <div id="main_content" class="container">
+    <% flash.each do |name, msg| %>
+      <%= content_tag(:div, msg, class: "alert alert-info") %>
+    <% end %>
+
+      <div id="content" class="col-md-9 center-block">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<footer class="footer-distributed">
+
+      <div class="footer-left">
+
+        <%= link_to root_path do %>
+        <%= image_tag "5.jpg" %>
+        <% end %>
+        
+
+        <p class="footer-links">
+           <%= link_to 'Home', root_path %>
+          ·
+           <%= link_to 'Sign up', new_user_registration_path %>
+          ·
+          <%= link_to 'Sign in', new_user_session_path %>
+          ·
+          <%= link_to 'About Us', about_path %>
+          ·
+          <%= link_to 'Contact Us', contact_path %>
+        </p>
+
+        <p class="footer-company-name">ApplyHub &copy; 2015</p>
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Alpha-1</span> Greater Noida, India</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+91 9718853005</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:care@applyhub.com">care@applyhub.me</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <div class="follow">Follow Us</div>
+        <div class="footer-icons">
+
+          <a href="http://www.facebook.com/piyushmaurya2312" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="http://www.twitter.com/piyushmaurya23" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="http://www.linkedin.com/in/piyushmaurya23" target="_blank"><i class="fa fa-linkedin"></i></a>
+          
+
+        </div>
+
+      </div>
+
+    </footer>
+
+
+
+    
+</body>
+</html>

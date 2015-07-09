@@ -1,0 +1,54 @@
+
+
+<h3>
+  <strong class="highlight">Title:</strong>
+  <%= @event.title %>
+</h3>
+
+<h3>
+  <strong class="highlight">Description:</strong>
+  <%= @event.description %>
+</h3>
+
+<h3>
+  <strong class="highlight">Place:</strong>
+  <%= @event.place %>
+</h3>
+
+<h3>
+  <strong class="highlight">Event Start Date:</strong>
+  <%= @event.event_start_date %>
+</h3>
+
+<h3>
+  <strong class="highlight">Event Start time:</strong>
+  <%= @event.event_start_time  %>
+</h3>
+
+<h3>
+  <strong class="highlight">Event End Date:</strong>
+  <%= @event.event_end_date %>
+</h3>
+
+<h3>
+  <strong class="highlight">Event End time:</strong>
+  <%= @event.event_end_time  %>
+</h3>
+
+
+<% if @event.user == current_user -%>
+  <div class="btn-group">
+
+     <% if !@event.event_end_date.to_date.past? %>
+
+          
+
+    <%= link_to 'Edit', edit_event_path(@event), class: "btn btn-primary" %><br><br><br>
+
+    <% end %>
+
+    
+
+    <%= link_to 'Delete', @event, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+  </div>
+<% end %>

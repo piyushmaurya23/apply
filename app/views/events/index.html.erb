@@ -1,0 +1,18 @@
+<% if user_signed_in? %>
+<h1>Your Events</h1>
+<% @events.each do |event| %>
+<% if event.user == current_user %>
+  <div class="link row clearfix">
+    <h2>
+    	
+      <%= link_to event.title, event %><br>
+      <small class="author">Created <%= time_ago_in_words(event.created_at) %> ago </small>
+        
+    </h2>
+  </div>
+  <% end %>
+<% end %>
+
+<% else %>
+<%= render "index" %>
+<% end %>
