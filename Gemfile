@@ -22,3 +22,4 @@ end
 gem 'devise', '~> 3.5.1'
 gem 'bootstrap-sass', '~> 3.3.4.1'
 gem 'rails_12factor', '~> 0.0.3', group: :development
+gem 'nprogress-rails'
