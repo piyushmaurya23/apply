@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get '/contact', to: 'pages#contact'
   get '/work' , to: 'pages#work'
   get '/index', to: 'events#index'
+  get '/eventshow', to: 'pages#eventshow'
   end
