@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
-  get 'participants/new'
-
-  get 'participants/create'
-
+  
   devise_for :users
   resources :events
+  resources :participants
   root to: "events#index"
   get '/about', to: 'pages#about'
   get '/contact', to: 'pages#contact'

@@ -51,3 +51,12 @@
     <%= link_to 'Delete', @event, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
   </div>
 <% end %>
+
+<% if user_signed_in? %>
+
+<% else %>
+
+<%= link_to 'Register', new_participant_path, class: "btn btn-primary"%>
+
+<% end %>
+
