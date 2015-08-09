@@ -6,7 +6,7 @@
       # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
       # Default deploy_to directory is /var/www/my_app
-      set :deploy_to, '/u/apps/apply'
+      set :deploy_to, '/home/deploy/gcet'
 
       # Use agent forwarding for SSH so you can deploy with the SSH key on your workstation.
       set :ssh_options, {
