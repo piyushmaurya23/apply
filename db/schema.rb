@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20150801092316) do
     t.datetime "updated_at", null: false
     t.string   "name"
     t.string   "email"
+    t.string   "mobile_no"
     t.integer  "event_id"
   end
 

@@ -1,17 +1,25 @@
-<%= form_for ([@event, @event.participant.build]) do |f| %>
-<p>
+<%= form_for(@participant) do |f| %>
+<div class="form-group">
 	<%= f.label :name %><br>
 	<%= f.text_field :name %>
+</div>
 
 
-</p>
-<p>
+<div class="form-group">
 	<%= f.label :email %><br>
 	<%= f.text_field :email %>
+</div>
 
-</p>
-<p>
+
+<div class="form-group">
+	<%= f.label :mobile_no %><br>
+	<%= f.text_field :mobile_no %>
+</div>
+
+
+<div class="form-group">
 	<%= f.submit %>
-</p>
+</div>
+
 
 <% end %>
