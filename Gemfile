@@ -9,7 +9,6 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'capistrano', '~> 3.3.5'
 gem 'capistrano-bundler', '~> 1.1.4'
 gem 'capistrano-rails', '~> 1.1.2'
-gem 'capistrano-rbenv', github: "capistrano/rbenv"
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
