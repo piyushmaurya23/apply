@@ -9,7 +9,14 @@ class AdminController < ApplicationController
 
   end
 
-  def hello
-
+  def main
+    
   end 
+
+  def adminuser
+
+  	@users=User.all
+  	@users_count=@users.count
+  	
+  end
 end

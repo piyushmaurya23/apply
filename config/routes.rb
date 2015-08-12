@@ -10,5 +10,6 @@ end
   get '/work' , to: 'pages#work'
   get '/index', to: 'events#index'
   get '/eventshow', to: 'pages#eventshow'
-  get '/admin', to: 'admin#hello'
+  get '/admin', to: 'admin#main'
+  get '/adminuser', to: 'admin#adminuser'
   end
